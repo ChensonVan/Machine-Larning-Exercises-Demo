@@ -21,6 +21,8 @@ for iter = 1:num_iters
 
     sigma = (X * theta - y)' * X / m;
     theta = theta - (alpha * sigma');
+    % theta = theta - alpha / m * ((X * theta - y)' * X)'; 
+    % theta = theta - alpha / m * (X' * (X * theta - y));
 
     % WRONG VERSION
     % sigma = sum((X * theta - y)' * X) / m

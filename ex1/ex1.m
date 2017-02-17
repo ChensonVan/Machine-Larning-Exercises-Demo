@@ -111,6 +111,7 @@ end
 J_vals = J_vals';
 % Surface plot
 figure;
+% plot 3-D figure
 surf(theta0_vals, theta1_vals, J_vals)
 xlabel('\theta_0'); ylabel('\theta_1');
 
