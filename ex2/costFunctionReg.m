@@ -23,11 +23,11 @@ h = sigmoid(z);
 
 
 % Hint: You should not regularize theta(1).
-J = (-y'*log(h) - (1 - y)' * log(1 - h)) / m + (lambda / (2 * m)) * (sum(theta.^2) - theta(1)^2);
-% J = (-y'*log(h) - (1 - y)' * log(1 - h)) / m + lambda / 2 ./ m * (theta' * theta - theta(1)^2);
+J = (-y' * log(h) - (1 - y)' * log(1 - h)) / m + (lambda / (2 * m)) * (sum(theta.^2) - theta(1)^2);
+% J = (-y' * log(h) - (1 - y)' * log(1 - h)) / m + lambda / 2 ./ m * (theta' * theta - theta(1)^2);
 
 % what is function of grad in COSTFUNCTION.m ?????
-%grad = (X' * (h - y)) / m + (lambda / m) * theta;
+grad = (X' * (h - y)) / m + (lambda / m) * theta;
 grad(1) = grad(1) - (lambda / m) * theta(1);
 
 % mask = ones(size(theta));
