@@ -48,11 +48,13 @@ x = zeros(n, 1);
 %
 %
 
-
+% SOLUTION - 1
 for idx = word_indices,
     x(idx) = 1;
 end
 
+% SOLUTION - 2
+% x(word_indices) = 1;
 
 
 

@@ -99,8 +99,12 @@ while ~isempty(email_contents)
 
     indexs = strcmp(vocabList, str)';   % '
     if sum(indexs) == 1,
+        % SOLUTION - 1
         [num idx] = max(indexs, [], 2);
         word_indices = [word_indices; idx];
+
+        % SOLUTION - 2
+        % idx = find(indexs == 1);
     end 
 
 
